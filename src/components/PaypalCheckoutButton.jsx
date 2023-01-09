@@ -8,7 +8,7 @@ const style = { layout: "vertical" };
 const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
   // usePayPalScriptReducer solo se puede usar dentro de elementos secundarios de PayPalScriptProviders
   // This is the main reason to wrap the PayPalButtons in a new component
-  const { isPending } = usePayPalScriptReducer();
+  const { options, isPending } = usePayPalScriptReducer();
 
   useEffect(() => {
     dispatch({
@@ -18,7 +18,7 @@ const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
         currency: currency,
       },
     });
-  }, [currency, showSpinner]);
+  }, [currency, dispatch, options, showSpinner]);
 
 
 
