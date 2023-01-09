@@ -21,7 +21,7 @@ const Login = () => {
         loginService(formulario).then((res) => {
             loginService(res.data);
             alert('Inicio de sesion exitoso');
-            Navigate("/products");
+            navigate("/products");
         }).catch((err) => {
             alert('Error al iniciar sesion');
     })
