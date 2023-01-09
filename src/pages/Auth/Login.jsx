@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
-    const { login } = useContext(UserContext);
+    // const { login } = useContext(UserContext);
     const [formulario, setFormulario] = useState({
         email: '',
         password: ''
