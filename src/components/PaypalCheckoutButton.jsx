@@ -1,4 +1,4 @@
-import { useEffect, dispatch } from "react";
+import { useEffect } from "react";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 // This values are the props in the UI
 const style = { layout: "vertical" };
@@ -8,7 +8,7 @@ const style = { layout: "vertical" };
 const PaypalCheckoutButton = ({ currency, amount, showSpinner }) => {
   // usePayPalScriptReducer solo se puede usar dentro de elementos secundarios de PayPalScriptProviders
   // This is the main reason to wrap the PayPalButtons in a new component
-  const { options, isPending } = usePayPalScriptReducer();
+  const { options, isPending, dispatch } = usePayPalScriptReducer();
 
   useEffect(() => {
     dispatch({
