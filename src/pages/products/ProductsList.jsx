@@ -32,9 +32,9 @@ const ProductList = () => {
                             {products.map((product) => {
                                 return (
 
-                                    <div className="col-sm-6 col-md-4" key={product.id}>
+                                    <div className="col-sm-6 col-md-4" key={product._id}>
                                         <div className="card mb-4">
-                                            <ul>
+                                            
                                                 <img src={product.image} className="card-img-top" alt='test' />
 
                                                 <div className="card-body">
@@ -44,25 +44,15 @@ const ProductList = () => {
                                                     <Link to="/checkout" className="btn btn-secondary btn-sm d-grid">Carrito</Link>
                                                     <Link to="/detail-product" className="btn btn-dark btn-sm d-grid mt-2">Detalle</Link>
                                                 </div>
-
-
-
-                                            </ul>
-
-
-
+                                        
                                         </div>
                                     </div>
                                 );
                             })}
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
-
 
         </main>
     );

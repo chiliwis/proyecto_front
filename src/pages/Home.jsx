@@ -15,7 +15,7 @@ const Home = () => {
                             <p className="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita nonumy dolor magna dolor vero</p>
                         </div>
                         <div className="col-sm-6">
-                            <div className="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style={{ width: 90, height: 90 }}><i className="fa fa-beer fa-2x text-white" /></div>
+                            <div className="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style={{ width: 90, height: 90 }}><i className="fa fa-diamond fa-2x text-white" /></div>
                             <h4 className="text-uppercase">Premios</h4>
                             <p className="mb-0">Tenemos plata en Cerveza Mexico 2019 y 2022 para la Mole Porter</p>
                         </div>

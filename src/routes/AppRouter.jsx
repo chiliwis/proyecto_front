@@ -8,6 +8,7 @@ import Login from '../pages/Auth/Login';
 import Signup from '../pages/Auth/Signup';
 import ProductDetail from '../pages/products/ProductDetail';
 import ProductList from '../pages/products/ProductsList';
+// import Profile from '../pages/Profile';
 
 function AppRouter() {
     return (
@@ -17,6 +18,7 @@ function AppRouter() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<ProductList />} />
             <Route path="/detail-product" element={<ProductDetail />} />
+            {/* <Route path="/profile" element={<Profile />} /> */}
 
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

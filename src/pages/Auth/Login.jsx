@@ -1,7 +1,11 @@
 import { useState, useContext } from 'react'; 
 import { loginService } from '../../services/Auth.service';
+import UserContext from '../../context/User.context';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const { login } = useContext(UserContext);
     const [formulario, setFormulario] = useState({
         email: '',
         password: ''
@@ -15,7 +19,9 @@ const Login = () => {
     const enviarDatos = (event) => {
         event.preventDefault();
         loginService(formulario).then((res) => {
+            loginService(res.data);
             alert('Inicio de sesion exitoso');
+            Navigate("/products");
         }).catch((err) => {
             alert('Error al iniciar sesion');
     })

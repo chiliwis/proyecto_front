@@ -10,4 +10,12 @@ const registerService = async (data) => {
     return response.data;
 };
 
-export { loginService, registerService };
+const getProfile = async () => {
+    const config = {
+        headers: { Authorization: `Bearer ${localStorage.getItem(process.env.REACT_APP_LOCALSTORAGE_TOKEN)}` }
+    };
+    const response = await axios.get(`${URL_ROOT}/users/profile`, config);
+    return response.data;
+};
+
+export { loginService, registerService, getProfile };
