@@ -1,5 +1,3 @@
-import portada from './Image/portada.jpg';
-
 const Hero = () => {
     return (
         <div>

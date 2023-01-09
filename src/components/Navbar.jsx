@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useContext } from 'react';
+// import { useContext } from 'react';
 
 const Navbar = () => {
     function menuResponsive() {
