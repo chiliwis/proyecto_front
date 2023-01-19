@@ -17,7 +17,7 @@ function AppRouter() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<ProductList />} />
-            <Route path="/detail-product" element={<ProductDetail />} />
+            <Route path="/detail-product/:id" element={<ProductDetail />} />
             {/* <Route path="/profile" element={<Profile />} /> */}
 
             <Route path="/login" element={<Login />} />
