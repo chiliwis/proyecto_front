@@ -6,7 +6,7 @@ const getProducts = async (data) => {
     return response.data;
 };
 
-const getProduct = async (_id) => {
+const getProduct = async (id) => {
     const response = await axios.get(`${URL_ROOT}/products?id=${_id}`);
     return response.data;
 };
