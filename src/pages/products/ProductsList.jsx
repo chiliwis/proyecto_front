@@ -1,11 +1,12 @@
 import Hero from "../../components/Hero";
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { getProducts } from "../../services/Product.service";
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        document.title = 'Products List';
+        document.title = 'Productos';
         getProducts().then((res
         ) => {
             setProducts(res.data);
@@ -41,7 +42,7 @@ const ProductList = () => {
                                                     <h4 className='card-title'>{product.name}</h4>
                                                     <p className="card-text">{product.description}</p>
                                                     <link to="/checkout" className="btn btn-secondary btn-sm d-grid">Carrito</link>
-                                                    <link to="/detail-product" className="btn btn-dark btn-sm d-grid mt-2">Detalle</link>
+                                                    <Link to="/detail-product" className="btn btn-dark btn-sm d-grid mt-2">Detalle</Link>
                                                 </div>
                                         
                                         </div>
